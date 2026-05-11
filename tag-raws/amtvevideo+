@@ -9,7 +9,7 @@ if user in victims:
 else:
   print(False)
 }}
-{if:{get:banned}|=|True|then:{js:console.log("You are banned from AMTVEVideo+ and all of its tag aliases.");}|else:
+{if:{get:banned}|=|True|then:{js:console.log("You are banned from AmvteRevive and all of its tag aliases.");}|else:
 {if:{argslen}|<|1|then:.t {tagname} <effect> <args...> <subcommand> <subcommand args>|else:-# Note: AMTVEVideo is in BETA!
 {if:{arg:1}|!=|list|then:{choose:hey i feel so sprunki|《SPRUNKI》|☆TAT☆ FOUND AFTER 10 YEARS NO WAY|{repeat:30|{mention:{user}}}|have a bowl mr squidward|https://media.discordapp.net/attachments/1124758334805909509/1334274228219940877/now.gif?ex=679bef35&is=679a9db5&hm=50d94b4217555d74e7059e03ab50d29972e827410a99d1117f471095181209ff&|New punjabi movies 2014 full movie free download hd 1080p|apt apt|guh huck|baaren chromed|if I had two donuts ate one and squashed and revived one, how much donuts I have now?|whar|you are making me angry|i have anger issues|W|L|have this, yuh big hoe|guh|I edge to your videos.|https://tenor.com/view/cat-brick-throw-explosion-gif-12081125062559658884|i eat videos. **NOM**|om nom stories|GET OUT!|https://tenor.com/view/eating-meme-spookyspook-bfdi-face-gif-27440393}
 }
@@ -107,3 +107,4 @@ ffmpeg -i $FILE_1 {get:code} ./output/amtvevideo.$extension}
 }
 }
 }
+{get:__iterationsRemaining} iteration?
