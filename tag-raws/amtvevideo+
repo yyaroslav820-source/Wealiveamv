@@ -68,7 +68,6 @@ match arg:
   case "g major 0": print('{set:code|-vf movie=$(magick hald:6 -modulate 100,100,%[fx:0.5*200+100] hue.ppm; echo ./hue.ppm),"[in]haldclut","curves=all=0/0 0.5/1 1/0",format=yuv420p -af "asplit=3[a0][a1][a2];[a0]rubberband=pitch=2^(-10/12):formant=712923000[a0a];[a1]rubberband=pitch=2^(0/12):formant=712923000[a1a];[a2]rubberband=pitch=2^(10/12):formant=712923000[a2a];[a0a][a1a][a2a]amix=3,volume=3,atrim=0.02"}')
   case "g major 1": print('{set:code|-vf movie=$(magick hald:6 -modulate 100,100,%[fx:0.5*200+100] hue.ppm; echo ./hue.ppm),"[in]haldclut",negate,format=yuv420p -af "rubberband=pitch=2^(8/12):formant=2.14748e+09/4.9:phase=712923000:pitchq=quality,atrim=0.02"}')
   case "g major 4": print('{set:code|-vf "curves=all=0/0 0.5/1 1/0",format=yuv420p -af "asplit=2[a0][a1];[a0]rubberband=pitch=2^(0/12):formant=2.14748e+09/4.9:phase=712923000:pitchq=quality[a0a];[a1]rubberband=pitch=2^(5/12):formant=2.14748e+09/4.9:phase=712923000:pitchq=quality[a1a];[a0a][a1a]amix=2,volume=2,atrim=0.02"}')
-  case _: 
 }
 {if:{arg:{math:{get:offset}+1}}|=|raw|then:{py:import json as js
 icon = "{avatar}"
